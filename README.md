@@ -10,3 +10,32 @@ La librería debemos cargar en arduino por los métodos tradicionales, incluyend
 - **mueve (vueltas, velocidad)**: Sirve para avanzar o retroceder. Se mueve el número de vueltas indicado, si son negativas va en el sentido contrario. La velocidad se da rpm
 - **gira (vueltas, velocidad)**: Sirve para girar. Se indica como antes el número de vueltas o fracción a girar, si son positivas gira en un sentido y negativas en el contrario. La velocidad se da en rpm.
 - **para ()**: detiene los dos motores.
+### Ejemplo de código
+~~~
+#include <Escornabot.h>
+
+Escornabot mirobot;//declaramos el objeto mirobot del tipo Escornabot
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin (9600);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+  if (analogRead(7) == 769) { //si el botón adelante de escornabot está pulsado
+
+    mirobot.mueve (1, 14); //mueve al objeto escornabot 1 vuelta hacia delante con velocidad 14 rpm
+  }
+
+  if (analogRead(7) == 516) { //si el botón atrás de escornabot está pulsado
+    mirobot.mueve (-1, 14); //mueve al objeto escornabot 1 vuelta hacia atrás con velocidad 14 rpm
+
+  }
+
+  Serial.println (analogRead (7));
+
+}
+~~~
