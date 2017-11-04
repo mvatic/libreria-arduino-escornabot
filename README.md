@@ -35,6 +35,16 @@ void loop() {
 
   }
 
+  if (analogRead(7) == 685) { //si el botón derecha de escornabot está pulsado
+    mirobot.gira (0.25, 14); //mueve al objeto 1/4 de vuelta hacia la derecha con velocidad 14 rpm
+
+  }
+
+  if (analogRead(7) == 882) { //si el botón izquierdo de escornabot está pulsado
+    mirobot.gira (-0.25, 14); //mueve al objeto 1/4 de vuelta hacia la izquierda con velocidad 14 rpm
+
+  }
+
   Serial.println (analogRead (7));
 
 }

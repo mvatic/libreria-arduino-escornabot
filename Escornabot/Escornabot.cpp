@@ -66,14 +66,14 @@ if (vueltas>=0) {
 while (int(vueltas*pasosvuelta)>=pasosdados)  {
      pasosdados ++;
      posbobina=pasosdados % 4;//calcula el resto para saber en la posición de bobina que está
-      digitalWrite(2, paso[posbobina][0]);
-      digitalWrite(6, paso[posbobina][3]);
-      digitalWrite(3, paso[posbobina][1]);
-      digitalWrite(7, paso[posbobina][2]);
-      digitalWrite(4, paso[posbobina][2]);
-      digitalWrite(8, paso[posbobina][1]);
-      digitalWrite(5, paso[posbobina][3]);
-      digitalWrite(9, paso[posbobina][0]);
+      digitalWrite(2, paso[posbobina][3]);
+      digitalWrite(6, paso[posbobina][0]);
+      digitalWrite(3, paso[posbobina][2]);
+      digitalWrite(7, paso[posbobina][1]);
+      digitalWrite(4, paso[posbobina][1]);
+      digitalWrite(8, paso[posbobina][2]);
+      digitalWrite(5, paso[posbobina][0]);
+      digitalWrite(9, paso[posbobina][3]);
       delayMicroseconds(29297/velocidad);//velocidad en rpm 29297 es el nº de microsegundos que tardaría en dar 2048 pasos (una vuelta) en un minuto
     }
 
@@ -83,14 +83,14 @@ else {
 while (int(-vueltas*pasosvuelta)>=pasosdados)  {
      pasosdados ++;
      posbobina=pasosdados % 4;
-      digitalWrite(2, paso[posbobina][3]);
-      digitalWrite(6, paso[posbobina][0]);
-      digitalWrite(3, paso[posbobina][2]);
-      digitalWrite(7, paso[posbobina][1]);
-      digitalWrite(4, paso[posbobina][1]);
-      digitalWrite(8, paso[posbobina][2]);
-      digitalWrite(5, paso[posbobina][0]);
-      digitalWrite(9, paso[posbobina][3]);
+      digitalWrite(2, paso[posbobina][0]);
+      digitalWrite(6, paso[posbobina][3]);
+      digitalWrite(3, paso[posbobina][1]);
+      digitalWrite(7, paso[posbobina][2]);
+      digitalWrite(4, paso[posbobina][2]);
+      digitalWrite(8, paso[posbobina][1]);
+      digitalWrite(5, paso[posbobina][3]);
+      digitalWrite(9, paso[posbobina][0]);
       delayMicroseconds(29297/velocidad);
     }
   
