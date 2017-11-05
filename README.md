@@ -1,3 +1,6 @@
+# Control de Versiones
+- 0.2 (5/11/2017): Se corrige y depura código (se mejora declaración de variables evitando duplicidades), se mejora el comentado y sangrado del código.
+- 0.1 (4/11/2017): Primera versión de librería.
 # Librería para arduino Escornabot
 Repositorio para albergar librería para manejar de forma amigable los motores paso a paso de Escornabot.
 
