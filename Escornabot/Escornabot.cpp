@@ -1,6 +1,9 @@
-/* 
-Librería Escornabot v 0.2 escrita por Pedro Ruiz @pedroruizf
- */
+/*
+ Librería para mover motores paso a paso de escornabot. V 0.3 escrito por Pedro Ruiz @pedroruizf
+V 0.3: Se añade posibilidad de elegir el tipo de excitación de bobinas 1 o 2, por defecto tipo 1 
+V 0.2: se depura y sangra código evitando duplicidades en procedimientos
+V 0.1: primera versión funcional del programa
+*/
 
 #include "Arduino.h"
 #include "Escornabot.h"
@@ -8,7 +11,8 @@ Librería Escornabot v 0.2 escrita por Pedro Ruiz @pedroruizf
 /*
  Constructor
  */
-Escornabot::Escornabot()
+
+Escornabot::Escornabot() //si no se pasan prámetros al constructor por defecto coge el paso 1 (1 solo motor a la vez)
 {
 //se definen los pines de escornabot como de salida
 	pinMode (2,OUTPUT);
@@ -21,6 +25,39 @@ Escornabot::Escornabot()
 	pinMode (9,OUTPUT);
 
 }
+
+Escornabot::Escornabot(int tipopaso) //aquí se construye el objeto escornabot con el tipo de paso (excitación de bobinas) 1 o 2
+{
+//se definen los pines de escornabot como de salida
+	pinMode (2,OUTPUT);
+	pinMode (3,OUTPUT);
+	pinMode (4,OUTPUT);
+	pinMode (5,OUTPUT);
+	pinMode (6,OUTPUT);
+	pinMode (7,OUTPUT);
+	pinMode (8,OUTPUT);
+	pinMode (9,OUTPUT);
+
+	if (tipopaso==1) {// se excita una bobina cada vez
+		int paso [4][4] =//matriz que describe orden de excitación de bobinas (4 posiciones)
+		{
+	  	{1, 0, 0, 0},
+	  	{0, 1, 0, 0},
+	  	{0, 0, 1, 0},
+	  	{0, 0, 0, 1}
+		};
+	}
+	if (tipopaso==2) {// se excitan dos bobinas a la vez
+		int paso [4][4] =//matriz que describe orden de excitación de bobinas (4 posiciones)
+		{
+	  	{1, 1, 0, 0},
+	  	{0, 1, 1, 0},
+	  	{0, 0, 1, 1},
+	  	{1, 0, 0, 1}
+		};
+	}
+}
+
 
 /*
 Procedimiento apara avanzar y retroceder 

@@ -1,4 +1,5 @@
 # Control de Versiones
+- 0.3 (5//11/2017): se añade la posibilidad de pasar parámetros al objeto Escornabot, si se le pasa 1, se excita una bobina en cada paso, si se le pasa dos, se excitan dos bobinas en cada paso. Si no se le pasan parámetros se excita una bobina en cada paso por defecto.
 - 0.2 (5/11/2017): Se corrige y depura código (se mejora declaración de variables evitando duplicidades), se mejora el comentado y sangrado del código.
 - 0.1 (4/11/2017): Primera versión de librería.
 # Librería para arduino Escornabot
