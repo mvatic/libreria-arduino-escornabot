@@ -1,6 +1,6 @@
-#include <Escornabot.h>
+#include <escornabot.h>
 
-Escornabot mirobot;
+escornabot mirobot;
 
 void setup() {
   // put your setup code here, to run once:
@@ -9,12 +9,14 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-mirobot.mueve (0.5,10);
+mirobot.drive (0.5,10);
 delay (1000);
-mirobot.mueve (-0.5, 10);
+mirobot.drive (-0.5, 10);
 delay (1000);
-mirobot.gira (0.25,10);
+mirobot.turn (0.25,10);
 delay (1000);
-mirobot.gira (-0.25,10);
+mirobot.turn (-0.25,10);
 delay (1000);
 }
+
+
