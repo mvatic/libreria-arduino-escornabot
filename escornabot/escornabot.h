@@ -28,7 +28,9 @@ class escornabot {
   	void buzzOFF(void);
 	//procedimiento para saber el botón que se ha pulsado
 	int pushButton(void);
-	//procedimiento que devuelve la versión de la librería    
+	//procedimiento que devuelve valor enviado por bluetooth	
+	int blueT(void);	
+	//procedimiento que devuelve la versión de la librería    	
 	int escornabot::version(void);
   protected:
   

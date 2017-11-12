@@ -42,6 +42,8 @@ int center = 819;
 
 escornabot::escornabot() //si no se pasan prámetros al constructor por defecto coge el paso 1 (1 sóla bobina a la vez)
 {
+//se inicializa las comunicaciones serie a 9600 baudios (para bluetooth)
+	Serial.begin (9600);//iniciamos las comunicaciones 
 //se definen los pines de motores de escornabot como de salida
 	for (int i=0;i<8;i++) {
 		pinMode(pinMotor [i],OUTPUT); 
@@ -63,6 +65,8 @@ escornabot::escornabot() //si no se pasan prámetros al constructor por defecto 
 
 escornabot::escornabot(int kindStep) //aquí se construye el objeto escornabot con el tipo de paso (excitación de bobinas) 1 o 2
 {
+//se inicializa las comunicaciones serie a 9600 baudios (para bluetooth)
+	Serial.begin (9600);//iniciamos las comunicaciones 
 //se definen los pines de motores de escornabot como de salida
 	for (int i=0;i<8;i++) {
 		pinMode(pinMotor [i],OUTPUT); 
@@ -247,6 +251,18 @@ int escornabot::pushButton(void){
     return 0;     
   }
 }//pushButton
+
+/*
+ * blueT procedimiento para saber el caracter que me han mandado por Bluetooth
+ * */
+int escornabot::blueT(void){
+if (Serial.available()>0) {
+	    int dato=Serial.read();
+		return dato;
+	}
+else return 0;
+
+}//blueT
 
 /*
   version() procedimiento que devuelve la versión de la librería

@@ -10,6 +10,8 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   //prueba de librería
+  
+  
   if (mirobot.pushButton() == 3) {//si pulsamos el botón delantero, se enciende led delantero, se mueve media vuelta hacia delante, y se apaga el led delantero 
     mirobot.ledON (3);
     mirobot.drive (0.5, 10);
@@ -49,6 +51,24 @@ void loop() {
       mirobot.ledOFF(i);
     }
 
+  }
+  
+  int a=mirobot.blueT();
+  if (a =='A') {
+
+  mirobot.drive (0.5,12);
+  }
+  if (a == 'R') {
+
+  mirobot.drive (-0.5,12);
+  }
+  if (a =='D') {
+
+  mirobot.turn (0.25,12);
+  }
+  if (a == 'I') {
+
+  mirobot.turn (-0.25,12);
   }
 
 }
