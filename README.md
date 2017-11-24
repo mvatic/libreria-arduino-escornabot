@@ -8,7 +8,7 @@ Repositorio para albergar librería para manejar de forma amigable los motores p
 
 ![](images/escornabot.jpg "escornabot")
 ## Antecedentes
-Unos de los problemas de escornabot es la ausencia de instrucciones amigables en arduino para controlar sus elementos (servomotores, botonera, leds y zumbador), todo ello pensando en el acercamiento del uso de dicho robot para estudiantes de secundaria. Por este motivo desde el club de Tecnología, programación y robótica de Granada nos planteamos desarrollar una librería para dicho fin.
+Unos de los problemas de escornabot es la ausencia de instrucciones amigables en arduino para controlar sus elementos (mototres paso a paso, botonera, leds y zumbador), todo ello pensando en el acercamiento del uso de dicho robot para estudiantes de secundaria. Por este motivo desde el club de Tecnología, programación y robótica de Granada nos planteamos desarrollar una librería para dicho fin.
 ## Librería
 La librería debemos cargar en arduino por los métodos tradicionales, incluyendo el zip o copiandola descomprimida en la carpeta "libraries" de arduino.
 ### procedimientos
